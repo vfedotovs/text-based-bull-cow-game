@@ -18,11 +18,17 @@ Try to quess number in less than 20 attempts.
 
 def pritty_print(memory_list: list) -> None:
     # print("debug: mylist len:", len(mylist))
-    myrange = int(len(memory_list) / 3)  # float
-    end = myrange * 3
+    memory_lines = int(len(memory_list) / 3)  # float
+    last_index = memory_lines * 3
     #for lines in range(myrange):
-    for i in range(3, end, 3):
-        print((i / 3) , memory_list[i - 3], memory_list[i - 2], memory_list[i - 1])
+    for i in range(3, last_index + 1 , 3):
+
+        line_number = str(int(i / 3))
+        guess_num_str = memory_list[i - 3]
+        cow_str = memory_list[i - 2]
+        bull_str = memory_list[i - 1]
+
+        print(line_number, guess_num_str, cow_str, bull_str)
 
 
 def memorize_guesses(cug: str,bc :int,cc :int, mylist: list) ->list:
