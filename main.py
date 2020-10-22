@@ -25,8 +25,8 @@ def pritty_print(memory_list: list) -> None:
 
         line_number = str(int(i / 3))
         guess_num_str = memory_list[i - 3]
-        cow_str = memory_list[i - 2]
-        bull_str = memory_list[i - 1]
+        cow_str = memory_list[i - 1]
+        bull_str = memory_list[i - 2]
 
         print(line_number, guess_num_str, cow_str, bull_str)
 
@@ -68,7 +68,7 @@ def main():
             #print("You have ", cow_count, " cows, ", bull_count,
             #      " bulls ", attempt_count, " attempts tryed")
             #print("---test ---")
-            guess_history = memorize_guesses(curr_usr_guess, cow_count, bull_count, pritty_list)
+            guess_history = memorize_guesses(curr_usr_guess, bull_count, cow_count, pritty_list)
             pritty_print(guess_history)
 
         attempt_count += 1
