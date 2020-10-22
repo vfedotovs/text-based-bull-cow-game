@@ -8,16 +8,18 @@
 
 
 ## About The Project
+
 This is example of text based game known as cow-bull or bull-cow  with numbers to practice python coding skills
 
 ## Prerequisites
+
 This game rquires that Python 3.x is installed
 
 ## Installation
 
-1. Clone the repo
+Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/vfedotovs/text-based-bull-cow-game.git
 ```
 
 ## Usage
