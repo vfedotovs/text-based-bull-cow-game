@@ -1,4 +1,4 @@
-import bullcow_lib
+import bullcowlib
 
 
 game_rules = """
@@ -18,22 +18,22 @@ Try to quess number in less than 20 attempts.
 
 def main():
     print(game_rules)
-    number_to_guess = bullcow_lib.gen_random_ints()
+    number_to_guess = bullcowlib.gen_random_ints()
     attempt_count = 1
     max_attempt_count = 20
     pritty_list = []
     while attempt_count < max_attempt_count:
-        curr_usr_guess = bullcow_lib.get_user_guess()
-        if bullcow_lib.check_win(number_to_guess, curr_usr_guess) is True:
+        curr_usr_guess = bullcowlib.get_user_guess()
+        if bullcowlib.check_win(number_to_guess, curr_usr_guess) is True:
             print("You have guessed all 4 numbers in ",
                   attempt_count, " attempts !!!")
             break
         else:
-            cow_count = bullcow_lib.check_cows(number_to_guess, curr_usr_guess)
-            bull_count = bullcow_lib.check_bulls(number_to_guess, curr_usr_guess)
-            guess_history = bullcow_lib.memorize_guesses(
+            cow_count = bullcowlib.check_cows(number_to_guess, curr_usr_guess)
+            bull_count = bullcowlib.check_bulls(number_to_guess, curr_usr_guess)
+            guess_history = bullcowlib.memorize_guesses(
                 curr_usr_guess, bull_count, cow_count, pritty_list)
-            bullcow_lib.pritty_print(guess_history)
+            bullcowlib.pritty_print(guess_history)
 
         attempt_count += 1
 
